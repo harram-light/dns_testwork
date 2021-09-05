@@ -27,6 +27,7 @@ namespace FactorialServer.Controllers
         {
             var result = await _factorialService.CalculateAsync(number);
 
+            // TODO handle any result cases
             if (string.IsNullOrEmpty(result))
                 return StatusCode(504);
             else
